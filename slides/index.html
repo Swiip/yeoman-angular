@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>YEOMAN - Modern workflows for mordern webapps</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+        <section>
+            <h1>YEOMAN</h1>
+
+            <h3>MODERN WORKFLOWS FOR MODERN WEBAPPS</h3>
+            <img src="img/yeoman-angular.png" height="400"/>
+        </section>
+
+        <section>
+            <h2>Le projet</h2>
+            <ul>
+                <li>Paul Irish</li>
+                <li>Addy Osmani</li>
+                <li>Sindre Sorhus</li>
+                <li>Mickael Daniel</li>
+                <li>Eric Bidelman</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Définition</h2>
+            <ul>
+                <li>CLI Node JS</li>
+                <li>Templates de projets</li>
+                <li>Bower</li>
+                <li>Grunt</li>
+                <li>Server de dev</li>
+            </ul>
+        </section>
+
+        <section>
+            <section>
+                <h2>Installation</h2>
+                <pre><code>curl -L get.yeoman.io | bash</code></pre>
+                <img src="img/yeoman-console.png" height="400"/>
+            </section>
+            <section>
+                <pre><code>Before I can assist you I will need to confirm you have the necessary requirements.
+Below you will find the results of my short system audit:
+
+   ✔ cURL is present, phew.
+   ✔ Compass check.
+   ✔ Git smashing!
+   ✔ JPEGTran check.
+   ✔ NodeJS check.
+   ✔ npm check.
+   ✔ OptiPNG check.
+   ✔ PhantomJS check.
+   ✔ Ruby check.
+   ✔ RubyGems check.
+   ✔ Yeoman extraordinary!
+ 
+ Wicked mate! Type yeoman at your prompt to summon me.</code></pre>
+            </section>
+        </section>
+
+        <section>
+            <h2>CLI Node JS</h2>
+<pre><code class="sh prettyprint"><span class="pln">yeoman init      </span><span class="c"><span class="com"># Initialize and scaffold a new project using generator templates</span></span><span class="pln">
+yeoman build     </span><span class="c"><span class="com"># Build an optimized version of your app, ready to deploy</span></span><span class="pln">
+yeoman server    </span><span class="c"><span class="com"># Launch a preview server which will begin watching for changes</span></span><span class="pln">
+yeoman </span><span class="nb"><span class="pln">test</span></span><span class="pln">      </span><span class="c"><span class="com"># Run a Mocha test harness in a headless PhantomJS</span></span><span class="pln">
+
+yeoman install   </span><span class="c"><span class="com"># Install a package from the clientside package registry</span></span><span class="pln">
+yeoman uninstall </span><span class="c"><span class="com"># Uninstall the package</span></span><span class="pln">
+yeoman update    </span><span class="c"><span class="com"># Update a package to the latest version</span></span><span class="pln">
+yeoman list      </span><span class="c"><span class="com"># List the packages currently installed</span></span><span class="pln">
+yeoman search    </span><span class="c"><span class="com"># Query the registry for matching package names</span></span><span class="pln">
+yeoman lookup    </span><span class="c"><span class="com"># Look up info on a particular package</span></span>
+           </code></pre>
+        </section>
+
+        <section>
+            <section>
+            <h2>Generators</h2>
+<pre><code>swiip@ubuntu:~$ yeoman init --help
+Running "init:yeoman" (init) task
+This task will create one or more files in the current directory, based on the environment and the answers to a few questions. Note that answering "?" to any question will show question-specific help and answering "none" to most questions will leave its value blank.
+
+"yeoman" template notes:
+
+Usage: yeoman generate GENERATOR [args] [options]
+
+General options:
+  -h, --help     # Print generator's options and usage
+</code></pre>
+            </section>
+            <section>
+<pre><code>Please choose a generator below.
+
+Yeoman:
+  generator
+
+Angular:
+  angular:all
+  angular:app
+  angular:common
+  angular:controller
+  angular:directive
+  angular:filter
+  angular:route
+  angular:service
+  angular:view
+</code></pre>
+            </section>
+            <section>
+<pre><code>Backbone:
+  backbone:all
+  backbone:app
+  backbone:collection
+  backbone:model
+  backbone:router
+  backbone:view
+
+Bbb:
+  bbb:all
+
+Chromeapp:
+  chromeapp:all
+</code></pre>
+            </section>
+            <section>
+<pre><code>Ember:
+  ember:all
+  ember:app
+  ember:controller
+  ember:model
+  ember:view
+
+Mocha:
+  mocha:generator
+
+Quickstart:
+  quickstart:all
+
+Testacular:
+  testacular:app
+</code></pre>
+            </section>
+        </section>
+
+        <section>
+            <h2>Generators</h2>
+<pre><code class="sh prettyprint"><span class="pln">        _   </span><span class="pun">.--------------------------.</span><span class="pln">
+      _</span><span class="pun">|</span><span class="pln">o</span><span class="pun">|</span><span class="pln">_ </span><span class="pun">|</span><span class="pln">    </span><span class="typ">Welcome</span><span class="pln"> to </span><span class="typ">Yeoman</span><span class="pun">,</span><span class="pln">    </span><span class="pun">|</span><span class="pln">
+       </span><span class="pun">|</span><span class="pln">_</span><span class="pun">|</span><span class="pln">  </span><span class="pun">|</span><span class="pln">   ladies </span><span class="kwd">and</span><span class="pln"> gentlemen</span><span class="pun">!</span><span class="pln">  </span><span class="pun">|</span><span class="pln">
+     </span><span class="str">/ </span><span class="se"><span class="str">\Y</span></span><span class="str">/</span><span class="pln"> </span><span class="se"><span class="pln">\ </span></span><span class="pln">o_________________________</span><span class="pun">|</span><span class="pln">
+    </span><span class="o"><span class="pun">||</span></span><span class="pln">  </span><span class="pun">:</span><span class="pln">  </span><span class="pun">|</span><span class="com">//</span><span class="pln">
+    o</span><span class="pun">/</span><span class="pln"> </span><span class="pun">---</span><span class="pln"> </span><span class="se"><span class="pln">\</span></span><span class="pln">
+      _</span><span class="se"><span class="pln">\ </span></span><span class="pun">/</span><span class="pln">_
+
+</span><span class="typ">Out</span><span class="pln"> of the box I include HTML5 </span><span class="typ">Boilerplate</span><span class="pun">,</span><span class="pln"> jQuery </span><span class="kwd">and</span><span class="pln"> </span><span class="typ">Modernizr</span><span class="pun">.</span><span class="pln">
+
+</span><span class="pun">..</span><span class="pln"> </span><span class="typ">Invoke</span><span class="pln"> app </span><span class="pun">..</span><span class="pln">
+
+</span><span class="typ">Please</span><span class="pln"> answer the following</span><span class="pun">:</span><span class="pln">
+</span><span class="o"><span class="pun">[</span></span><span class="pun">?</span><span class="o"><span class="pun">]</span></span><span class="pln"> </span><span class="typ">Would</span><span class="pln"> you like to include </span><span class="typ">Twitter</span><span class="pln"> </span><span class="typ">Bootstrap</span><span class="pln"> </span><span class="k"><span class="kwd">for</span><span class="pln"> </span></span><span class="typ">Compass</span><span class="pun">?</span><span class="pln"> </span><span class="o"><span class="pun">(</span></span><span class="pln">Y</span><span class="pun">/</span><span class="pln">n</span><span class="o"><span class="pun">)</span></span>
+            </code></pre>
+        </section>
+
+        
+
+        <section>
+            <h2>Bower</h2>
+        </section>
+
+        <section>
+            <h2>Grunt</h2>
+        </section>
+
+        <section>
+            <h2>Server</h2>
+        </section>
+
+        <section>
+            <h1>Let's go</h1>
+        </section>
+
+    </div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme || 'default', // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            } },
+            { src: 'plugin/markdown/showdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            } },
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } },
+            { src: 'plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } }
+            // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+    });
+
+</script>
+
+</body>
+</html>

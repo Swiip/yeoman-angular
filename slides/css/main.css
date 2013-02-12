@@ -1,0 +1,22 @@
+/*.reveal section.title img {*/
+    /*border: none;*/
+    /*background: none;*/
+    /*box-shadow: none;*/
+/*}*/
+
+/*.reveal section.title div{*/
+    /*position: absolute;*/
+/*}*/
+
+/*.reveal section.title img.yeoman {*/
+    /*position: relative;*/
+    /*top: -100px;*/
+    /*left: 0;*/
+
+/*}*/
+
+/*.reveal section.title img.angular {*/
+    /*position: relative;*/
+    /*top: -100px;*/
+    /*left: 0;*/
+/*}*/
