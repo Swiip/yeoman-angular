@@ -51,6 +51,9 @@ server.all('/carottes/:_id', function (req, res) {
             });
             break;
         case 'PUT':
+            if(req.body._id) {
+                delete req.body._id;
+            }
             carottes.findAndModify({_id : req.params._id}, {$set: req.body}, function (err, doc) {
                 res.send(200);
             });
