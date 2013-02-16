@@ -35,182 +35,354 @@
 
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
-
         <section>
-            <h1>YEOMAN</h1>
+            <section>
+                <img src="img/yeoman-logo.png"/>
 
-            <h3>MODERN WORKFLOWS FOR MODERN WEBAPPS</h3>
-            <img src="img/yeoman-angular.png" height="400"/>
+                <h3>MODERN WORKFLOWS FOR MODERN WEBAPPS</h3>
+            </section>
+
+            <section>
+                <h2>L'équipe</h2>
+                <ul>
+                    <li>Paul Irish</li>
+                    <li>Addy Osmani</li>
+                    <li>Sindre Sorhus</li>
+                    <li>Mickael Daniel</li>
+                    <li>Eric Bidelman</li>
+                </ul>
+                <img src="https://si0.twimg.com/profile_images/2910976341/7d972c32f3882f715ff84a67685e6acf.jpeg" style="float: left; width: 100px;"/>
+                <img src="https://si0.twimg.com/profile_images/2502859589/nxqs1t0xa8n5jm1w0c4q.jpeg" style="float: right; width: 100px;"/>
+                <img src="https://si0.twimg.com/profile_images/2911101882/897b5c9183aed5cae66de40208466c00.png" style="float: left; width: 100px; clear: left;"/>
+                <img src="https://si0.twimg.com/profile_images/1250714234/IMG_0044.JPG" style="float: right; width: 100px; clear: right;"/>
+                <img src="https://si0.twimg.com/profile_images/1747369516/DevRel-Party-68.jpeg" style="float: left; width: 100px; clear: left;"/>
+            </section>
+
+            <section>
+                <img src="img/yeoman.jpg"/>
+            </section>
         </section>
 
-        <section>
-            <h2>Le projet</h2>
-            <ul>
-                <li>Paul Irish</li>
-                <li>Addy Osmani</li>
-                <li>Sindre Sorhus</li>
-                <li>Mickael Daniel</li>
-                <li>Eric Bidelman</li>
-            </ul>
-        </section>
 
         <section>
             <h2>Définition</h2>
             <ul>
-                <li>CLI Node JS</li>
-                <li>Templates de projets</li>
-                <li>Bower</li>
-                <li>Grunt</li>
-                <li>Server de dev</li>
+                <img src="img/workflow.jpg"/>
             </ul>
         </section>
 
         <section>
-            <section>
-                <h2>Installation</h2>
-                <pre><code>curl -L get.yeoman.io | bash</code></pre>
-                <img src="img/yeoman-console.png" height="400"/>
-            </section>
-            <section>
-                <pre><code>Before I can assist you I will need to confirm you have the necessary requirements.
-Below you will find the results of my short system audit:
-
-   ✔ cURL is present, phew.
-   ✔ Compass check.
-   ✔ Git smashing!
-   ✔ JPEGTran check.
-   ✔ NodeJS check.
-   ✔ npm check.
-   ✔ OptiPNG check.
-   ✔ PhantomJS check.
-   ✔ Ruby check.
-   ✔ RubyGems check.
-   ✔ Yeoman extraordinary!
- 
- Wicked mate! Type yeoman at your prompt to summon me.</code></pre>
-            </section>
-        </section>
-
-        <section>
-            <h2>CLI Node JS</h2>
-<pre><code class="sh prettyprint"><span class="pln">yeoman init      </span><span class="c"><span class="com"># Initialize and scaffold a new project using generator templates</span></span><span class="pln">
-yeoman build     </span><span class="c"><span class="com"># Build an optimized version of your app, ready to deploy</span></span><span class="pln">
-yeoman server    </span><span class="c"><span class="com"># Launch a preview server which will begin watching for changes</span></span><span class="pln">
-yeoman </span><span class="nb"><span class="pln">test</span></span><span class="pln">      </span><span class="c"><span class="com"># Run a Mocha test harness in a headless PhantomJS</span></span><span class="pln">
-
-yeoman install   </span><span class="c"><span class="com"># Install a package from the clientside package registry</span></span><span class="pln">
-yeoman uninstall </span><span class="c"><span class="com"># Uninstall the package</span></span><span class="pln">
-yeoman update    </span><span class="c"><span class="com"># Update a package to the latest version</span></span><span class="pln">
-yeoman list      </span><span class="c"><span class="com"># List the packages currently installed</span></span><span class="pln">
-yeoman search    </span><span class="c"><span class="com"># Query the registry for matching package names</span></span><span class="pln">
-yeoman lookup    </span><span class="c"><span class="com"># Look up info on a particular package</span></span>
-           </code></pre>
+            <img src="img/yeoman-009.png" height="400"/>
+            <pre><code>npm install -g yo grunt-cli bower</code></pre>
         </section>
 
         <section>
             <section>
-            <h2>Generators</h2>
-<pre><code>swiip@ubuntu:~$ yeoman init --help
-Running "init:yeoman" (init) task
-This task will create one or more files in the current directory, based on the environment and the answers to a few questions. Note that answering "?" to any question will show question-specific help and answering "none" to most questions will leave its value blank.
-
-"yeoman" template notes:
-
-Usage: yeoman generate GENERATOR [args] [options]
-
-General options:
-  -h, --help     # Print generator's options and usage
-</code></pre>
+                <img src="img/yo.png" height="400"/>
             </section>
             <section>
-<pre><code>Please choose a generator below.
+                <pre><code>
+yo webapp
+yo angular
+yo backbone
 
-Yeoman:
-  generator
-
-Angular:
-  angular:all
-  angular:app
-  angular:common
-  angular:controller
-  angular:directive
-  angular:filter
-  angular:route
-  angular:service
-  angular:view
-</code></pre>
+yo &lt;generator> - generate template project with the generator
+yo --help
+                </code></pre>
             </section>
             <section>
-<pre><code>Backbone:
-  backbone:all
-  backbone:app
-  backbone:collection
-  backbone:model
-  backbone:router
-  backbone:view
+                <img src="img/yocli.jpg" height="600"/>
+            </section>
+        </section>
+<section>
+        <section>
+            <img src="img/bower.png" height="400"/>
+        </section>
+    <section>
+        <pre><code>
+bower search &lt;dep> - search for a dependency in the Bower registry
+bower install &lt;dep>..&lt;depN> - install one or more dependencies
+bower list - list out the dependencies you have installed
+bower update &lt;dep> - update a dependency to the latest version
+        </code></pre>
+    </section>
+</section>
 
-Bbb:
-  bbb:all
-
-Chromeapp:
-  chromeapp:all
-</code></pre>
+        <section>
+            <section>
+                <img src="img/grunt.png" height="400"/>
             </section>
             <section>
-<pre><code>Ember:
-  ember:all
-  ember:app
-  ember:controller
-  ember:model
-  ember:view
+              <pre><code>
+'use strict';
+var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
+var mountFolder = function (connect, dir) {
+    return connect.static(require('path').resolve(dir));
+};
 
-Mocha:
-  mocha:generator
+module.exports = function (grunt) {
+    // load all grunt tasks
+    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-Quickstart:
-  quickstart:all
+    // configurable paths
+    var yeomanConfig = {
+        app: 'app',
+        dist: 'dist'
+    };
 
-Testacular:
-  testacular:app
-</code></pre>
+    grunt.initConfig({
+        yeoman: yeomanConfig,
+        watch: {
+            coffee: {
+                files: ['<%= yeoman.app %>/scripts/*.coffee'],
+                tasks: ['coffee:dist']
+            },
+            coffeeTest: {
+                files: ['test/spec/*.coffee'],
+                tasks: ['coffee:test']
+            },
+            compass: {
+                files: ['<%= yeoman.app %>/styles/*.{scss,sass}'],
+                tasks: ['compass']
+            },
+            livereload: {
+                files: [
+                    '<%= yeoman.app %>/*.html',
+                    '{.tmp,<%= yeoman.app %>}/styles/*.css',
+                    '{.tmp,<%= yeoman.app %>}/scripts/*.js',
+                    '<%= yeoman.app %>/images/*.{png,jpg,jpeg}'
+                ],
+                tasks: ['livereload']
+            }
+        },
+        connect: {
+            livereload: {
+                options: {
+                    port: 9000,
+                    middleware: function (connect) {
+                        return [
+                            lrSnippet,
+                            mountFolder(connect, '.tmp'),
+                            mountFolder(connect, 'app')
+                        ];
+                    }
+                }
+            },
+            test: {
+                options: {
+                    port: 9000,
+                    middleware: function (connect) {
+                        return [
+                            mountFolder(connect, '.tmp'),
+                            mountFolder(connect, 'test')
+                        ];
+                    }
+                }
+            }
+        },
+        open: {
+            server: {
+                url: 'http://localhost:<%= connect.livereload.options.port %>'
+            }
+        },
+        clean: {
+            dist: ['.tmp', '<%= yeoman.dist %>/*'],
+            server: '.tmp'
+        },
+        jshint: {
+            options: {
+                jshintrc: '.jshintrc'
+            },
+            all: [
+                'Gruntfile.js',
+                '<%= yeoman.app %>/scripts/*.js',
+                'test/spec/*.js'
+            ]
+        },
+        mocha: {
+            all: {
+                options: {
+                    run: true,
+                    urls: ['http://localhost:<%= connect.test.options.port %>/index.html']
+                }
+            }
+        },
+        coffee: {
+            dist: {
+                files: {
+                    '.tmp/scripts/coffee.js': '<%= yeoman.app %>/scripts/*.coffee'
+                }
+            },
+            test: {
+                files: [{
+                    expand: true,
+                    cwd: '.tmp/spec',
+                    src: '*.coffee',
+                    dest: 'test/spec'
+                }]
+            }
+        },
+        compass: {
+            options: {
+                sassDir: '<%= yeoman.app %>/styles',
+                cssDir: '.tmp/styles',
+                imagesDir: '<%= yeoman.app %>/images',
+                javascriptsDir: '<%= yeoman.app %>/scripts',
+                fontsDir: '<%= yeoman.app %>/styles/fonts',
+                importPath: 'app/components',
+                relativeAssets: true
+            },
+            dist: {},
+            server: {
+                options: {
+                    debugInfo: true
+                }
+            }
+        },
+        // not used since Uglify task does concat,
+        // but still available if needed
+        /*concat: {
+            dist: {}
+        },*/
+
+        uglify: {
+            dist: {
+                files: {
+                    '<%= yeoman.dist %>/scripts/main.js': [
+                        '.tmp/scripts/*.js',
+                        '<%= yeoman.app %>/scripts/*.js'
+                    ],
+                }
+            }
+        },
+        useminPrepare: {
+            html: '<%= yeoman.app %>/index.html',
+            options: {
+                dest: '<%= yeoman.dist %>'
+            }
+        },
+        usemin: {
+            html: ['<%= yeoman.dist %>/*.html'],
+            css: ['<%= yeoman.dist %>/styles/*.css'],
+            options: {
+                dirs: ['<%= yeoman.dist %>']
+            }
+        },
+        imagemin: {
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeoman.app %>/images',
+                    src: '*.{png,jpg,jpeg}',
+                    dest: '<%= yeoman.dist %>/images'
+                }]
+            }
+        },
+        cssmin: {
+            dist: {
+                files: {
+                    '<%= yeoman.dist %>/styles/main.css': [
+                        '.tmp/styles/*.css',
+                        '<%= yeoman.app %>/styles/*.css'
+                    ]
+                }
+            }
+        },
+        htmlmin: {
+            dist: {
+                options: {
+                    /*removeCommentsFromCDATA: true,
+                    // https://github.com/yeoman/grunt-usemin/issues/44
+                    //collapseWhitespace: true,
+                    collapseBooleanAttributes: true,
+                    removeAttributeQuotes: true,
+                    removeRedundantAttributes: true,
+                    useShortDoctype: true,
+                    removeEmptyAttributes: true,
+                    removeOptionalTags: true*/
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeoman.app %>',
+                    src: '*.html',
+                    dest: '<%= yeoman.dist %>'
+                }]
+            }
+        },
+        copy: {
+            dist: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= yeoman.app %>',
+                    dest: '<%= yeoman.dist %>',
+                    src: [
+                        '*.{ico,txt}',
+                        '.htaccess'
+                    ]
+                }]
+            }
+        },
+        bower: {
+            rjsConfig: 'app/scripts/main.js',
+            indent: '    '
+        }
+    });
+
+    grunt.renameTask('regarde', 'watch');
+    // remove when mincss task is renamed
+    grunt.renameTask('mincss', 'cssmin');
+
+    grunt.registerTask('server', [
+        'clean:server',
+        'coffee:dist',
+        'compass:server',
+        'livereload-start',
+        'connect:livereload',
+        'open',
+        'watch'
+    ]);
+
+    grunt.registerTask('test', [
+        'clean:server',
+        'coffee',
+        'compass',
+        'connect:test',
+        'mocha'
+    ]);
+
+    grunt.registerTask('build', [
+        'clean:dist',
+        //'jshint',
+        'test',
+        'coffee',
+        'compass:dist',
+        'useminPrepare',
+        'imagemin',
+        'cssmin',
+        'htmlmin',
+        'concat',
+        'uglify',
+        'copy',
+        'usemin'
+    ]);
+
+    grunt.registerTask('default', ['build']);
+};
+              </code></pre>
+            </section>
+            <section>
+              <pre><code>
+grunt - build an optimized, production-ready version of your app
+grunt server - preview an app you have generated (with Livereload)
+grunt test  - run the unit tests for an app
+              </code></pre>
             </section>
         </section>
 
         <section>
-            <h2>Generators</h2>
-<pre><code class="sh prettyprint"><span class="pln">        _   </span><span class="pun">.--------------------------.</span><span class="pln">
-      _</span><span class="pun">|</span><span class="pln">o</span><span class="pun">|</span><span class="pln">_ </span><span class="pun">|</span><span class="pln">    </span><span class="typ">Welcome</span><span class="pln"> to </span><span class="typ">Yeoman</span><span class="pun">,</span><span class="pln">    </span><span class="pun">|</span><span class="pln">
-       </span><span class="pun">|</span><span class="pln">_</span><span class="pun">|</span><span class="pln">  </span><span class="pun">|</span><span class="pln">   ladies </span><span class="kwd">and</span><span class="pln"> gentlemen</span><span class="pun">!</span><span class="pln">  </span><span class="pun">|</span><span class="pln">
-     </span><span class="str">/ </span><span class="se"><span class="str">\Y</span></span><span class="str">/</span><span class="pln"> </span><span class="se"><span class="pln">\ </span></span><span class="pln">o_________________________</span><span class="pun">|</span><span class="pln">
-    </span><span class="o"><span class="pun">||</span></span><span class="pln">  </span><span class="pun">:</span><span class="pln">  </span><span class="pun">|</span><span class="com">//</span><span class="pln">
-    o</span><span class="pun">/</span><span class="pln"> </span><span class="pun">---</span><span class="pln"> </span><span class="se"><span class="pln">\</span></span><span class="pln">
-      _</span><span class="se"><span class="pln">\ </span></span><span class="pun">/</span><span class="pln">_
-
-</span><span class="typ">Out</span><span class="pln"> of the box I include HTML5 </span><span class="typ">Boilerplate</span><span class="pun">,</span><span class="pln"> jQuery </span><span class="kwd">and</span><span class="pln"> </span><span class="typ">Modernizr</span><span class="pun">.</span><span class="pln">
-
-</span><span class="pun">..</span><span class="pln"> </span><span class="typ">Invoke</span><span class="pln"> app </span><span class="pun">..</span><span class="pln">
-
-</span><span class="typ">Please</span><span class="pln"> answer the following</span><span class="pun">:</span><span class="pln">
-</span><span class="o"><span class="pun">[</span></span><span class="pun">?</span><span class="o"><span class="pun">]</span></span><span class="pln"> </span><span class="typ">Would</span><span class="pln"> you like to include </span><span class="typ">Twitter</span><span class="pln"> </span><span class="typ">Bootstrap</span><span class="pln"> </span><span class="k"><span class="kwd">for</span><span class="pln"> </span></span><span class="typ">Compass</span><span class="pun">?</span><span class="pln"> </span><span class="o"><span class="pun">(</span></span><span class="pln">Y</span><span class="pun">/</span><span class="pln">n</span><span class="o"><span class="pun">)</span></span>
-            </code></pre>
-        </section>
-
-        
-
-        <section>
-            <h2>Bower</h2>
-        </section>
-
-        <section>
-            <h2>Grunt</h2>
-        </section>
-
-        <section>
-            <h2>Server</h2>
-        </section>
-
-        <section>
-            <h1>Let's go</h1>
+            <h2>Talk is cheap. Show me the code.</h2>
+            <h3>Linus Torvalds</h3>
         </section>
 
     </div>

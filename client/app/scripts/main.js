@@ -1,29 +1,32 @@
-angular.module('yeoman-angular', ['ya-controllers']);
-
 angular
-    .module('ya-controllers', [])
-    .controller('hello', function ($scope) {
-        $scope.hello = 'hello world !!';
-    })
-    .controller('grid', function ($scope, $http) {
-        $http.get('http://localhost:1234/carottes').success(function (data) {
-            $scope.carottes = data;
-        });
+  .module('lyonjs', [])
+  .value('url', 'http://localhost:1234/carottes')
+  .controller('main', function ($scope, $http, url) {
+    var modal = $(".modal");
 
-        $scope.edit = function (carotte) {
-            $scope.carotte = carotte;
-            $("div.modal").modal("show");
-        }
+    $scope.hello = 'Hello';
 
-        $scope.save = function (save) {
-            if(save) {
-                if($scope.carotte._id) {
-                    $http.put('http://localhost:1234/carottes/' + $scope.carotte._id, $scope.carotte);
-                } else {
-                    $http.post('http://localhost:1234/carottes', $scope.carotte);
-                    $scope.carottes.push($scope.carotte);
-                }
-            }
-            $("div.modal").modal("hide");
-        }
+    $http.get(url).success(function (data) {
+      $scope.carottes = data;
     });
+
+    $scope.edit = function (carotte) {
+      $scope.carotte = carotte;
+      modal.modal('show');
+    };
+
+    $scope.save = function () {
+      if ($scope.carotte._id) {
+        $http.put(url + '/' + $scope.carotte._id, $scope.carotte);
+      } else {
+        $http.post(url, $scope.carotte);
+        $scope.carottes.push($scope.carotte);
+      }
+      modal.modal('hide');
+    };
+
+    $scope.delete = function (carotte) {
+      $http.delete(url + '/' + carotte._id);
+      $scope.carottes.splice($scope.carottes.indexOf(carotte), 1);
+    };
+  });
