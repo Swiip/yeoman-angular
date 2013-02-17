@@ -22,10 +22,12 @@
 <body ng-app="lyonjs">
 <div class="container" ng-controller="main">
     <div class="hero-unit">
-        <h1>{{hello}}</h1>
-        <input type="text" ng-model="hello">
+        <h3>{{hello}}</h3>
     </div>
-    <table class="table table-bordered table-striped">
+</div>
+
+<div class="container" ng-controller="crud">
+    <table class="table table-bordered">
         <thead>
         <tr>
             <th>Couleur</th>
@@ -37,18 +39,20 @@
             <td>{{carotte.couleur}}</td>
             <td>{{carotte.forme}}</td>
             <td>
-                <button class="btn btn-danger" ng-click="delete(carotte)">
-                    Delete
-                </button>
+                <button class="btn btn-danger" ng-click="delete(carotte)">Delete</button>
             </td>
         </tr>
         </tbody>
     </table>
+
     <button class="btn" ng-click="edit({})">Add</button>
+
     <div class="modal fade">
-        <div class="modal-header"><h3>Edit</h3></div>
+        <div class="modal-header">
+            <h3>Edit</h3>
+        </div>
         <div class="modal-body">
-            <form>
+            <form class="form">
                 <label>Couleur</label>
                 <input type="text" ng-model="carotte.couleur"/>
                 <label>Forme</label>
@@ -101,6 +105,7 @@
 <!-- endbuild -->
 
 <script src="components/angular/angular.js"></script>
+<script src="components/angular-resource/angular-resource.js"></script>
 <script src="scripts/main.js"></script>
 
 </body>

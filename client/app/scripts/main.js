@@ -1,32 +1,44 @@
 angular
-  .module('lyonjs', [])
-  .value('url', 'http://localhost:1234/carottes')
-  .controller('main', function ($scope, $http, url) {
-    var modal = $(".modal");
+  .module('lyonjs', ['lyonjs-controllers']);
 
-    $scope.hello = 'Hello';
+angular
+  .module('lyonjs-config', [])
+  .value('url', 'http://localhost\\:1234/carottes');
 
-    $http.get(url).success(function (data) {
+angular
+  .module('lyonjs-controllers', ['lyonjs-config', 'ngResource'])
+
+  .factory('Carottes', function ($resource, url) {
+    return $resource(url + '/:_id', {_id: '@_id'});
+  })
+
+  .controller('main', function ($scope) {
+    $scope.hello = 'Hello LyonJS';
+  })
+
+  .controller('crud', function ($scope, $http, Carottes) {
+    var modal = $('.modal');
+
+    Carottes.query(function (data) {
       $scope.carottes = data;
     });
 
     $scope.edit = function (carotte) {
-      $scope.carotte = carotte;
       modal.modal('show');
+      $scope.carotte = carotte;
     };
 
     $scope.save = function () {
-      if ($scope.carotte._id) {
-        $http.put(url + '/' + $scope.carotte._id, $scope.carotte);
-      } else {
-        $http.post(url, $scope.carotte);
+      modal.modal('hide');
+      Carottes.save($scope.carotte);
+      if (!$scope.carotte._id) {
         $scope.carottes.push($scope.carotte);
       }
-      modal.modal('hide');
-    };
+    }
 
     $scope.delete = function (carotte) {
-      $http.delete(url + '/' + carotte._id);
+      carotte.$delete();
       $scope.carottes.splice($scope.carottes.indexOf(carotte), 1);
-    };
+    }
   });
+
