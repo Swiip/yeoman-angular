@@ -1,0 +1,31 @@
+<div class="hero-unit">
+  <h1>{{hello}}</h1>
+</div>
+
+<table class="table table-bordered table-striped">
+    <tr><th>Name</th><th>URL</th></tr>
+    <tr ng-repeat="framework in frameworks" ng-click="edit(framework)">
+        <td>{{framework.name}}</td>
+        <td>{{framework.url}}</td>
+        <td><button class="btn btn-danger" ng-click="delete(framework, $event, $index)">Delete</button> </td>
+    </tr>
+</table>
+
+<button class="btn" ng-click="edit({})">Add</button>
+
+<div class="modal fade show">
+    <div class="modal-header">
+        <h2>Edit</h2>
+    </div>
+    <div class="modal-body">
+        <form>
+            <label>Name</label>
+            <input type="text" ng-model="framework.name">
+            <label>URL</label>
+            <input type="text" ng-model="framework.url">
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" ng-click="save()">Save</button>
+    </div>
+</div>
