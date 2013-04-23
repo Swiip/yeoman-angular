@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>YEOMAN - Modern workflows for mordern webapps</title>
+    <title>Yeoman & AngularJS - Modern workflows & framework for mordern webapps</title>
 
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
     <meta name="author" content="Hakim El Hattab">
@@ -15,6 +15,16 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/reveal.min.css">
     <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <style type="text/css">
+        .reveal .slides>section {
+            top: -60%;
+            padding: 0;
+        }
+
+        .reveal section img {
+            background-color: white;
+        }
+    </style>
 
     <!-- For syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -27,6 +37,9 @@
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
+
+    <script type="text/javascript" src="lib/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="lib/js/angular.min.js"></script>
 </head>
 
 <body>
@@ -35,6 +48,64 @@
 
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
+        <section>
+            <img src="img/mixit-banner.png" height="150"/>
+            <h1>Livecoding avec Yeoman & AngularJS</h1>
+            <img src="img/yeoman-logo.png" height="150"/>
+            <img src="img/AngularJS-huge.png" height="150"/>
+        </section>
+
+        <section>
+            <section>
+                <h2>Matthieu Lux</h2>
+
+                <ul>
+                    <li>Développeur & Architecte chez Zenika Lyon
+                        <ul>
+                            <li><strong>JavaScript</strong>: AngularJS, jQuery, Yeoman, Grunt...</li>
+                            <li><strong>Java</strong> : Spring, MVC, Data, Integeration</li>
+                            <li><strong>Mobilité</strong> : Android, PhoneGap</li>
+                        </ul>
+                    </li>
+                    <br/>
+                    <img src="img/AngularJS-Shield-large.png" style="float: right; height: 100px;"/>
+                    <img src="img/swiip.jpg" style="float: right; height: 100px; margin-right: 20px;"/>
+
+                    <li>Twitter : <a href="https://twitter.com/Swiip">@Swiip</a></li>
+                    <br/>
+                    <li>Blog : <a href="http://swiip.github.io">http://swiip.github.io/</a></li>
+                </ul>
+            </section>
+            
+            <section>
+                <img src="img/logo-zenika.jpg" height="200"/>
+                <br/>
+                <img src="img/Zenika_activities.jpg" />
+            </section>
+
+            <section>
+                <img src="img/lyon-js-logo.png"/>
+                <br/>
+                <br/>
+                <ul>
+                    <li>A l'Epitech, le "premier" Mardi du mois</li>
+                    <br/>
+                    <li>Prochaine session : le 7 Mai</li>
+                    <br/>
+                    <li>Toute l'actu : <a href="https://twitter.com/LyonJS">@LyonJS</a></li>
+                    <br/>
+                    <li>Site : <a href="http://lyonjs.org">http://lyonjs.org</a></li>
+                </ul>
+            </section>
+        </section>
+
+        <!--
+        <img src="img/logo-zenika.jpg" style="float: right; width: 100px;"/>
+        <img src="img/AngularJS-Shield-large.png" style="clear: right; float: right; width: 100px;"/>
+        <img src="img/lyon-js-logo.png" style="clear: right; float: right; width: 100px;"/>
+        <img src="img/archetype-logo.png" style="clear: right; float: right; width: 100px;"/>
+        -->
+
         <section>
             <section>
                 <img src="img/yeoman-logo.png"/>
@@ -51,11 +122,11 @@
                     <li>Mickael Daniel</li>
                     <li>Eric Bidelman</li>
                 </ul>
-                <img src="https://si0.twimg.com/profile_images/2910976341/7d972c32f3882f715ff84a67685e6acf.jpeg" style="float: left; width: 100px;"/>
-                <img src="https://si0.twimg.com/profile_images/2502859589/nxqs1t0xa8n5jm1w0c4q.jpeg" style="float: right; width: 100px;"/>
-                <img src="https://si0.twimg.com/profile_images/2911101882/897b5c9183aed5cae66de40208466c00.png" style="float: left; width: 100px; clear: left;"/>
-                <img src="https://si0.twimg.com/profile_images/1250714234/IMG_0044.JPG" style="float: right; width: 100px; clear: right;"/>
-                <img src="https://si0.twimg.com/profile_images/1747369516/DevRel-Party-68.jpeg" style="float: left; width: 100px; clear: left;"/>
+                <img src="img/irish.jpeg" style="float: left; width: 100px;"/>
+                <img src="img/osmani.jpeg" style="float: right; width: 100px;"/>
+                <img src="img/sorhus.png" style="float: left; width: 100px; clear: left;"/>
+                <img src="img/daniel.JPG" style="float: right; width: 100px; clear: right;"/>
+                <img src="img/bidelman.jpeg" style="float: left; width: 100px; clear: left;"/>
             </section>
 
             <section>
@@ -381,10 +452,174 @@ grunt test  - run the unit tests for an app
         </section>
 
         <section>
-            <h2>Talk is cheap. Show me the code.</h2>
-            <h3>Linus Torvalds</h3>
+            <img src="img/AngularJS-huge.png" alt="AngularJS" style="background-color: white; padding: 10px; height: 200px;">
+
+            <h3>HTML enhanced for web apps!</h3>
         </section>
 
+        <section>
+            <section>
+                <h2>Imperative</h2>
+
+                <img src="img/browsers.jpg" alt="Old Browsers" height="200">
+                <img src="img/js.png" alt="JS" height="200">
+
+                <h3>Old browsers & Pure JS</h3>
+            </section>
+
+            <section>
+<pre><code class="html">&lt;!-- HTML -->
+  &lt;h3 id="greeting">&lt;/h3>
+</code></pre>
+<pre><code class="javascript">// JavaScript
+  var isIE = document.attachEvent;
+  var addListener = isIE
+    ? function(e, t, fn) { e.attachEvent('on' + t, fn); }
+    : function(e, t, fn) { e.addEventListener(t, fn, false); };
+  addListener(window, 'load', function() {
+    var greeting = document.getElementById('greeting');
+    if (isIE) greeting.innerText = 'Hello World!';
+    else greeting.textContent = 'Hello World!';
+  });
+</code></pre>
+            </section>
+
+            <section>
+                <h3 id="greeting"></h3>
+
+                <script>
+                    var isIE = document.attachEvent;
+                    var addListener = isIE
+                            ? function(e, t, fn) { e.attachEvent('on' + t, fn); }
+                            : function(e, t, fn) { e.addEventListener(t, fn, false); };
+                    addListener(window, 'load', function() {
+                        var greeting = document.getElementById('greeting');
+                        if (isIE) greeting.innerText = 'Hello World!';
+                        else greeting.textContent = 'Hello World!';
+                    });
+                </script>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Imperative ++</h2>
+
+                <img src="img/jquery-logo.png" alt="jQuery" height="150">
+
+                <h3>jQuery era</h3>
+            </section>
+
+            <section>
+<pre><code class="html">&lt;!-- HTML -->
+    &lt;h3 id="greeting-jquery">&lt;/h3>
+    &lt;input type="text" id="greeting-input-jquery"/>
+</code></pre>
+<pre><code class="javascript">// JavaScript
+    $(function() {
+        var greeting = $('#greeting-jquery');
+        var input = $('#greeting-jquery-input');
+        greeting.html('Hello World!');
+        input.val('Hello World!');
+        input.keyup(function() {
+            greeting.html(input.val());
+        });
+    });
+</code></pre>
+            </section>
+
+            <section>
+                <h3 id="greeting-jquery"></h3>
+                <input type="text" id="greeting-jquery-input"/>
+
+                <script>
+                    $(function() {
+                        var greeting = $('#greeting-jquery');
+                        var input = $('#greeting-jquery-input');
+                        greeting.html('Hello World!');
+                        input.val('Hello World!');
+                        input.keyup(function() {
+                            greeting.html(input.val());
+                        });
+                    });
+                </script>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Declarative</h2>
+
+                <img src="img/AngularJS-huge.png" alt="AngularJS" height="150">
+
+                <h3>Injection + MVC + Binding</h3>
+            </section>
+
+            <section>
+<pre><code class="html">&lt;!-- HTML -->
+    &lt;div ng-controller="controller">
+        &lt;h3>{{greeting}}&lt;/h3>
+        &lt;input type="text" ng-model="greeting"/>
+    &lt;/div>
+</code></pre>
+<pre><code class="javascript">// JavaScript
+    function controller($scope) {
+        $scope.greeting = 'Hello World!';
+    }
+</code></pre>
+            </section>
+
+            <section>
+                <div ng-app ng-controller="controller">
+                    <h3>{{greeting}}</h3>
+                    <input type="text" ng-model="greeting"/>
+                </div>
+
+                <script>
+                    function controller($scope) {
+                        $scope.greeting = 'Hello World!';
+                    }
+                </script>
+            </section>
+        </section>
+
+        <section>
+            <h2>MVC</h2>
+            <img src="img/mvc.png" alt="MVC"/>
+        </section>
+
+        <section>
+            <h2>And many more!</h2>
+            <ul>
+                <li>DOM Templating</li>
+                <li>Dependency Injection</li>
+                <li>Two Way Databinding</li>
+                <li>Directives</li>
+                <li>History Managment</li>
+                <li>Dirty Checking</li>
+                <li>Filtres</li>
+                <li>REST Resources</li>
+                <li>Scope Inheritance</li>
+                <li>Unit Testing</li>
+                <li>End to End Tests</li>
+                <li>Karma</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Code!</h2>
+            <h3><a href="https://github.com/Swiip/yeoman-angular">https://github.com/Swiip/yeoman-angular</a></h3>
+        </section>
+
+        <section>
+            <h2>Questions?</h2>
+        </section>
+
+        <section>
+            <h2>Thanks!</h2>
+            <h3><a href="https://github.com/Swiip/yeoman-angular">https://github.com/Swiip/yeoman-angular</a></h3>
+            <h3><a href="https://twitter.com/Swiip">@Swiip</a></h3>
+        </section>
     </div>
 
 </div>
@@ -400,7 +635,7 @@ grunt test  - run the unit tests for an app
         controls: true,
         progress: true,
         history: true,
-        center: true,
+        center: false,
 
         theme: Reveal.getQueryHash().theme || 'default', // available themes are in /css/theme
         transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none

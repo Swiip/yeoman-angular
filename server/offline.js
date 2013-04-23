@@ -64,7 +64,7 @@ server.all('/frameworks/:_id', function (req, res) {
       });
       break;
     case 'DELETE':
-      frameworks.remove(req.params, function () {
+      frameworks.remove({_id: req.params._id}, function () {
         res.send(200);
       });
       break;
